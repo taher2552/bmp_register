@@ -7,13 +7,16 @@
 }
 
 .mobile_login_container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
   max-width: 550px;
   margin: 0 auto;
   padding-top: 0.8rem;
   flex-direction: column;
+}
+
+.mobile_top_logo{
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .mobile_login_sign_up {
@@ -60,7 +63,7 @@
 
 .mobile_login_tabs {
   display: inline-flex;
-  padding: 0.3rem 0.8em;
+  padding: 0.3rem 0.8rem;
   justify-content: center;
   align-items: center;
   gap: 0.625rem;
@@ -162,6 +165,7 @@
   width: 100%;
   padding-left: 1rem;
   padding-right: 1rem;
+  position: relative;
 }
 
 .mobile_login_input input {
@@ -203,18 +207,20 @@
   background-color: #fff;
 }
 
-
 .mobile_login_line {
   text-align: center;
   margin-top: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items:center;
 }
 
 .mobile_login_line p {
   position: relative;
   font-weight: 500;
   color: #505050;
-font-family: DM Sans;
-font-size: 0.875rem;
+  font-family: DM Sans;
+  font-size: 0.875rem;
 }
 
 .mobile_login_line p::before {
@@ -239,45 +245,202 @@ font-size: 0.875rem;
   position: absolute;
 }
 
-.mobile_login_media{
+.mobile_login_media {
   display: flex;
   justify-content: center;
   align-items: center;
+  padding-left: 1rem;
+  padding-right: 1rem;
 }
 
-.mobile_login_social{
+.mobile_login_social {
   display: flex;
   justify-content: center;
   align-items: center;
   border-radius: 0.3125rem;
-border: 1px solid #DCDCDC;
-background:#FFF;
-padding: 0.56rem 2rem;
-width: 100%;
-margin-top: 1.5rem;
-margin-bottom: 4rem;
+  border: 1px solid #dcdcdc;
+  background: #fff;
+  padding: 0.56rem 2rem;
+  width: 100%;
+  margin-top: 1.5rem;
+  margin-bottom: 4rem;
 }
 
-.mobile_login_social:first-child{
+.mobile_login_social:first-child {
   margin-right: 1rem;
 }
 
-.mobile_login_google{
-  color:#222;
+.mobile_login_google {
+  color: #222;
+  text-align: center;
+  font-family: DM Sans;
+  font-size: 0.875rem;
+  font-weight: 500;
+  margin-left: 0.3rem;
+}
+
+/* authentication page */
+
+.otp-cards {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 1rem;
+  width: 100%;
+  margin-top: 2rem;
+}
+
+.otp-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.otp-box {
+  width: 3.5rem;
+  height: 3rem;
+  border: 1px solid #dcdcdc;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left:1rem;
+
+}
+
+.otp-input {
+  font-size: 1rem;
+  outline: none;
+  border: none;
+  width: 100%;
+  text-align: center;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+.mobile_login_authenticate{
+  color: #000;
+font-family: DM Sans;
+font-size: 1.376rem;
+font-weight: 600;
+}
+
+.mobile_login_verify{
+  color:#505050;
 text-align: center;
 font-family: DM Sans;
 font-size: 0.875rem;
 font-weight: 500;
-margin-left: 0.3rem;
+padding-left: 1rem;
+padding-right: 1rem;
 }
+
+.mobile_login_verify span:first-child{
+  font-weight: 700;
+}
+
+.mobile_login_verify span:last-child{
+  color:#0172FF;
+  cursor: pointer;
+}
+
+.mobile_login_otp p{
+  color: #fe5c4d;
+font-family: DM Sans;
+font-size: 0.875rem;
+font-weight: 500;
+cursor: pointer;
+margin-bottom: 5rem;
+}
+
+.mobile_login_otp{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+/* authentication page  ends*/
+
+/* password get otp  */
+
+.mobile_login_get_otp{
+  color: #4A6EA9;
+font-family: DM Sans;
+font-size: 1rem;
+font-weight: 500;
+cursor: pointer;
+}
+
+.mobile_login_get_otp{
+  position: absolute;
+  top:69%;
+  left:80%;
+}
+
+.mobile_get_otp_btn{
+  margin-top: 5rem;
+}
+
+.forget_password_mob{
+  margin-top: 1rem;
+  text-align: right;
+  margin-right: 1rem;
+  cursor: pointer;
+}
+
+.forget_password_mob p{
+  color:#fe5c4d;
+  text-align: end;
+font-family: DM Sans;
+font-size: 0.75rem;
+}
+/* password get otp ends */
+
+
+@media only screen and (max-width: 430px) {
+  .mobile_login_get_otp{
+    left:75%;
+  }
+
+  .mobile_login_tabs {
+    padding: 0.3rem 0.5rem;
+  }
+}
+
 
 @media only screen and (max-width: 370px) {
-.mobile_login_option{
-  flex-direction: column;
+  /* .mobile_login_option {
+    flex-direction: column;
+  } */
+
+  .mobile_login_tabs {
+   font-size: 0.9rem;
+  }
+ 
+
+  .mobile_login_get_otp{
+    left:70%;
+  }
+
+  .mobile_login_social{
+    padding: 0.56rem 1rem;
+  }
 }
 
-.mobile_login_tabs{
-  margin-bottom: 0.5rem;
-  width: 8rem;
-}
+@media only screen and (max-width: 300px) {
+  .mobile_login_tabs {
+    font-size: 0.75rem;
+   }
+  
 }
